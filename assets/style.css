@@ -1,0 +1,205 @@
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --border: #334155;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête futuriste */
+header {
+    background: #1e293b;
+    border-bottom: 2px solid var(--accent);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    color: var(--accent);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-color);
+    background: #0f172a;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--accent);
+    color: #0f172a;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+/* Conteneur principal en mode "Carte" */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+}
+
+h2 {
+    color: var(--accent);
+    border-bottom: 2px dashed var(--border);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Tableaux stylés */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #0f172a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+table th {
+    background-color: #1e293b;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+table tr:hover td {
+    background-color: #334155;
+}
+
+/* Formulaires et Recherche */
+.search-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-form input[type="text"], select {
+    background: #0f172a;
+    border: 2px solid var(--border);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 350px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-form input[type="text"]:focus, select:focus {
+    border-color: var(--accent);
+}
+
+button, .btn-reset {
+    background: var(--accent);
+    color: #0f172a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover, .btn-reset:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.btn-reset {
+    background: #475569;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-retour {
+    background: #10b981;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+.btn-retour:hover {
+    background: #059669;
+    color: white;
+}
+
+/* Badges néon */
+.badge {
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.badge.disponible { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+.badge.emprunte { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+.badge.en-cours { background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8; }
+.badge.retard { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+
+tr.row-retard td {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Alertes */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.alert.success { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+.alert.error { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+
+/* Accueil stylé */
+.welcome-box {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid var(--accent);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 50px;
+}
